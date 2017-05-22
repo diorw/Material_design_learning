@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_discover"
+            android:icon="@drawable/ic_search_discover"
+            android:title="发现"
+            />
+        <item
+            android:id="@+id/nav_hottest"
+            android:icon="@drawable/hottest"
+            android:title="最热" />
+        <item
+            android:id="@+id/nav_classification"
+            android:icon="@drawable/classification"
+            android:title="分类" />
+        <item
+            android:id="@+id/nav_dress"
+            android:icon="@drawable/dress"
+            android:title="装扮" />
+    </group>
+
+    <!--<item android:title="Communicate">-->
+    <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="分享" />
+            <item
+                android:id="@+id/nav_Collection"
+                android:icon="@drawable/collection"
+                android:title="收藏" />
+            <item
+                android:id="@+id/nav_setup"
+                android:icon="@drawable/setup"
+                android:title="设置" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/about"
+                android:title="关于" />
+    </group>
+    <!--</item>-->
+
+</menu>
