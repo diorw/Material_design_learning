@@ -41,7 +41,7 @@ public class PictureDescriptionActivity extends AppCompatActivity {
 
         setContentView(R.layout.recycle_layout);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
-        setSupportActionBar(toolbar);
+        toolbar.inflateMenu(R.menu.picture_toolbar);
 
         recyclerView = (RecyclerView)findViewById(R.id.recyler);
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL));

@@ -150,7 +150,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_Collection) {
 
         }else if (id == R.id.nav_setup) {
-
+            Intent intent = new Intent();
+            intent.setClass(MainActivity.this,UserSettingActicity.class);
+            startActivity(intent);
         }else if (id == R.id.nav_about) {
 
         }

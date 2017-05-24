@@ -25,6 +25,10 @@
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
+        <activity android:name=".UserSettingActicity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
 
     </application>
 
