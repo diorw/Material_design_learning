@@ -18,6 +18,8 @@ public class UserSettingActicity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.user_toolbar);
+        toolbar.setTitle("个人资料");
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorTitle));
         toolbar.inflateMenu(R.menu.user_menu);
 
     }
