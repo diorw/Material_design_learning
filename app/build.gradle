@@ -35,4 +35,5 @@ dependencies {
     compile 'com.daimajia.easing:library:1.0.0@aar'
     compile 'com.daimajia.androidanimations:library:1.1.2@aar'
     compile 'com.github.fengdai:alertdialogpro-theme-material:0.2.6'
+    compile 'com.wdullaer:materialdatetimepicker:3.2.2'
 }

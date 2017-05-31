@@ -37,9 +37,68 @@
         android:layout_width="match_parent"
         android:layout_height="72dp"
         android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingTop="12dp"
+
+                android:src="@drawable/ic_sex"/>
+            <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:paddingBottom="16dp"
+                    android:id="@+id/gender"
+                    android:onClick="true"
+                    android:hint="gender"/>
+            </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+            <ImageView
+
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingTop="12dp"
+
+                android:src="@drawable/ic_birthday"/>
+            <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:paddingBottom="16dp"
+                    android:id="@+id/birthday"
+                    android:hint="birthday"/>
+            </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="8dp"
 
         android:orientation="horizontal">
+
         <ImageView
+            android:paddingTop="12dp"
             android:layout_marginTop="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -64,12 +123,14 @@
         android:layout_height="72dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal">
+
         <ImageView
             android:layout_marginTop="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
+            android:paddingTop="12dp"
             android:src="@drawable/ic_introduce"/>
         <com.wrapp.floatlabelededittext.FloatLabeledEditText
             android:layout_width="300dp"
