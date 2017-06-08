@@ -5,10 +5,10 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:transitionName="image_large"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
+        android:transitionName="turn_large"
+    
+
         android:id="@+id/large_image_item"
-        android:alpha="0"
-        android:layout_marginTop="8dp"/>
+        android:layout_gravity="center"
+        />
 </LinearLayout>

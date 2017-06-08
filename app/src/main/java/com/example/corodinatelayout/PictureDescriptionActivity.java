@@ -65,7 +65,8 @@ public class PictureDescriptionActivity extends AppCompatActivity {
             public void onItemClick(View view, int position) {
                 Intent intent = new Intent(getApplicationContext(),ImageLargeActivity.class);
                 intent.putExtra("src",imgs[position]);
-                startActivity(intent);
+                startActivity(intent,ActivityOptions.makeSceneTransitionAnimation(PictureDescriptionActivity.this,view,"turn_large").toBundle());
+
             }
         });
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {

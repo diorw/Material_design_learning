@@ -23,7 +23,7 @@ public class ImageLargeActivity extends Activity {
         imageView = (ImageView)findViewById(R.id.large_image_item);
         int drawable = getIntent().getExtras().getInt("src");
         imageView.setImageResource(drawable);
-        imageView.animate().alpha(1).setDuration(1000).withStartAction(new Runnable() {
+        imageView.animate().setDuration(1000).withStartAction(new Runnable() {
             @Override
             public void run() {
 
@@ -34,6 +34,6 @@ public class ImageLargeActivity extends Activity {
 
             }
         });
-        imageView.setLongClickable();
+
     }
 }
