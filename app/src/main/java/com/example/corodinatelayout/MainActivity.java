@@ -140,7 +140,9 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_discover) {
             // Handle the camera action
         } else if (id == R.id.nav_hottest) {
-
+            Intent intent = new Intent();
+            intent.setClass(MainActivity.this,FoldMainActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_classification) {
 
         } else if (id == R.id.nav_dress) {

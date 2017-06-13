@@ -32,7 +32,15 @@
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
+        <activity android:name="com.example.corodinatelayout.FoldMainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
 
+        </activity>
+        <provider
+            android:name="com.example.corodinatelayout.AssetProvider"
+            android:authorities="com.example.corodinatelayout"
+            android:grantUriPermissions="true"
+            android:exported="true" />
     </application>
 
 </manifest>
