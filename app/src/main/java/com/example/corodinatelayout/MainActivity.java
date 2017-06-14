@@ -60,7 +60,8 @@ public class MainActivity extends AppCompatActivity
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+      //  setSupportActionBar(toolbar);
+        toolbar.setTitle("首页");
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
         mTabLayout = (TabLayout) findViewById(R.id.tabs);
         mInflater = LayoutInflater.from(this);
@@ -174,9 +175,9 @@ public class MainActivity extends AppCompatActivity
         mViewList.add(view2);
         mViewList.add(view3);
         //设置每个tab标题
-        mTitleList.add("postCast");
-        mTitleList.add("video");
-        mTitleList.add("network");
+        mTitleList.add("画板精选");
+        mTitleList.add("画板精选");
+        mTitleList.add("个人画板");
 
         mTabLayout.setTabMode(TabLayout.MODE_FIXED);//设置tab模式，当前为系统默认模式
         mTabLayout.addTab(mTabLayout.newTab().setText(mTitleList.get(0)));//添加tab选项卡

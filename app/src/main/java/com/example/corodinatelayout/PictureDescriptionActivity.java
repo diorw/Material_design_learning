@@ -31,9 +31,9 @@ public class PictureDescriptionActivity extends AppCompatActivity {
     public List<pictureBeen> Imagelist;
     private ImageView imageView;
     private int[] imgs ={
-         R.drawable.flower1,R.drawable.flower5,R.drawable.flower5,R.drawable.flower5,R.drawable.flower1,R.drawable.flower5
-            ,R.drawable.flower1,R.drawable.flower1,R.drawable.flower1,R.drawable.flower5,R.drawable.flower1,R.drawable.flower5
-            ,R.drawable.flower1,R.drawable.flower5,R.drawable.flower1,
+         R.drawable.flower7,R.drawable.flower5,R.drawable.flower5,R.drawable.flower5,R.drawable.flower2,R.drawable.flower7
+            ,R.drawable.flower2,R.drawable.flower7,R.drawable.flower2,R.drawable.flower5,R.drawable.flower1,R.drawable.flower5
+            ,R.drawable.flower2,R.drawable.flower5,R.drawable.flower7,
     };
     private String[] titles ={
             "春雪","夏雨","秋菊","冬梅","玫瑰","晓月","如花","燕雀","青瓷","浮萍",

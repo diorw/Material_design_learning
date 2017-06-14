@@ -36,6 +36,7 @@
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
+
         <provider
             android:name="com.example.corodinatelayout.AssetProvider"
             android:authorities="com.example.corodinatelayout"
