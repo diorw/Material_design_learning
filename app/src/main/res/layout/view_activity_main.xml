@@ -1,0 +1,293 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dip"
+        android:id="@+id/frameLayout">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:layout_gravity="bottom"
+            android:background="#33000000"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="图片标题"
+                android:textColor="@android:color/white" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip"
+                android:orientation="horizontal" >
+
+                <View
+                    android:id="@+id/dot_0"
+                    android:layout_width="5dip"
+                    android:layout_height="5dip"
+                    android:layout_marginLeft="2dip"
+                    android:layout_marginRight="2dip"
+                    android:background="@drawable/dot_focused"/>
+
+                <View
+                    android:id="@+id/dot_1"
+                    android:layout_width="5dip"
+                    android:layout_height="5dip"
+                    android:layout_marginLeft="2dip"
+                    android:layout_marginRight="2dip"
+                    android:background="@drawable/dot_normal"/>
+                <View
+                    android:id="@+id/dot_2"
+                    android:layout_width="5dip"
+                    android:layout_height="5dip"
+                    android:layout_marginLeft="2dip"
+                    android:layout_marginRight="2dip"
+                    android:background="@drawable/dot_normal"/>
+                <View
+                    android:id="@+id/dot_3"
+                    android:layout_width="5dip"
+                    android:layout_height="5dip"
+                    android:layout_marginLeft="2dip"
+                    android:layout_marginRight="2dip"
+                    android:background="@drawable/dot_normal"/>
+                <View
+                    android:id="@+id/dot_4"
+                    android:layout_width="5dip"
+                    android:layout_height="5dip"
+                    android:layout_marginLeft="2dip"
+                    android:layout_marginRight="2dip"
+                    android:background="@drawable/dot_normal"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        android:layout_below="@+id/frameLayout">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dip"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:gravity="left">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_height="48dp"
+                android:layout_width="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/painter"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dip"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:gravity="left">
+
+                <TextView
+                    android:id="@+id/title1"
+                    android:layout_width="200dp"
+                    android:layout_height="24dp"
+                    android:text="Line.半生忆"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/title3"
+                    android:layout_width="260dp"
+                    android:layout_height="24dp"
+                    android:text="1252采集 792粉丝"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:textStyle="bold"
+                    android:textSize="14sp"/>
+                </LinearLayout>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="你内心深处肯定有特别的火焰 能和别人区分开来"
+            android:textColor="@android:color/black"
+            android:textSize="14dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:gravity="left">
+
+            <ImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image1"
+                android:layout_height="24dp"
+                android:layout_width="6dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/biao"
+                />
+            <TextView
+                android:id="@+id/title4"
+                android:layout_width="70dp"
+                android:layout_height="20dp"
+                android:text="推荐画板"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <View android:layout_height="1px" android:background="#000000" android:layout_width="fill_parent"></View>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_margin="8dp"
+            android:gravity="left">
+            <ImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image3"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/spring"
+                />
+            <TextView
+                android:id="@+id/title5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      正在拔节的麦苗儿，像绿色的地毯，厚厚的铺在田野上。"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="8dp"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <View android:layout_height="1px" android:background="#000000" android:layout_width="fill_parent"></View>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="8dp"
+            android:gravity="left">
+            <ImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image5"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/summer"
+                />
+            <TextView
+                android:id="@+id/title6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      走着，走着，我被一池荷花给迷住了。"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+        <View android:layout_height="1px" android:background="#000000" android:layout_width="fill_parent"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_margin="8dp"
+            android:gravity="left">
+            <ImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image7"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/autumn"
+                />
+            <TextView
+                android:id="@+id/title7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      碧云天，黄叶地，秋色连波，波上寒烟翠。"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+        <View android:layout_height="1px" android:background="#000000" android:layout_width="fill_parent"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_margin="8dp"
+            android:gravity="left">
+            <ImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image8"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/winter"
+                />
+            <TextView
+                android:id="@+id/title8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      终南阴岭秀，积雪浮云端。"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+    </ScrollView>

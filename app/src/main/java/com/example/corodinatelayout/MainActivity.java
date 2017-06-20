@@ -25,8 +25,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
-
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity
     private LayoutInflater mInflater;
     private View view1, view2, view3, view4, view5;
     private RecyclerView recyclerView;
-
+    private ImageView welcomeImg = null;
     private LinearLayoutManager mLayoutManager;
     private CoordinatorLayout co;
     private ImageButton heart;
@@ -56,12 +56,13 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-      //  setSupportActionBar(toolbar);
-        toolbar.setTitle("首页");
+        setSupportActionBar(toolbar);
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
         mTabLayout = (TabLayout) findViewById(R.id.tabs);
         mInflater = LayoutInflater.from(this);
@@ -99,6 +100,9 @@ public class MainActivity extends AppCompatActivity
 //        recyclerView.setAdapter(mAdapter);
 
     }
+
+
+
 
     @Override
     public void onBackPressed() {
@@ -140,16 +144,19 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_discover) {
             // Handle the camera action
+            Intent intent = new Intent();
+            intent.setClass(MainActivity.this,DiscoverActivity.class);
+            startActivity(intent);
+
+
         } else if (id == R.id.nav_hottest) {
             Intent intent = new Intent();
             intent.setClass(MainActivity.this,FoldMainActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_classification) {
-
-            Intent intent = new Intent();
-            intent.setClass(MainActivity.this,GridLayout_Selected.class);
-            startActivity(intent);
-
+           // Intent intent = new Intent();
+          //  intent.setClass(MainActivity.this,ViewpageActivity.class);
+          //  startActivity(intent);
         } else if (id == R.id.nav_dress) {
 
         } else if (id == R.id.nav_share) {
@@ -179,9 +186,9 @@ public class MainActivity extends AppCompatActivity
         mViewList.add(view2);
         mViewList.add(view3);
         //设置每个tab标题
-        mTitleList.add("画板精选");
-        mTitleList.add("画板精选");
-        mTitleList.add("个人画板");
+        mTitleList.add("postCast");
+        mTitleList.add("video");
+        mTitleList.add("network");
 
         mTabLayout.setTabMode(TabLayout.MODE_FIXED);//设置tab模式，当前为系统默认模式
         mTabLayout.addTab(mTabLayout.newTab().setText(mTitleList.get(0)));//添加tab选项卡

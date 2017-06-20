@@ -39,10 +39,6 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 
-/**
- * Layout which allow a foldable animation between two other layouts. The only limitation of this
- * layout is than the big view should be exactly twice bigger in height than the small view {@link #setupViews(int, int, int, Context)}.
- */
 public class FoldableLayout extends RelativeLayout {
 
     private static final int ANIMATION_DURATION = 600;

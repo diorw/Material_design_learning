@@ -33,7 +33,6 @@
                 android:hint="name"/>
         </com.wrapp.floatlabelededittext.FloatLabeledEditText>
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="72dp"
@@ -116,8 +115,7 @@
                 android:textSize="16dp"
                 android:paddingBottom="16dp"
                 android:id="@+id/email"
-                android:inputType="textEmailAddress"
-                android:hint="email"/>
+                android:hint="name"/>
         </com.wrapp.floatlabelededittext.FloatLabeledEditText>
     </LinearLayout>
     <LinearLayout
