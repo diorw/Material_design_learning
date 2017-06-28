@@ -6,10 +6,13 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.DatePicker;
 import android.widget.EditText;
+
+import com.gc.materialdesign.views.CheckBox;
 
 import java.util.Calendar;
 
@@ -19,6 +22,7 @@ import java.util.Calendar;
  */
 public class UserSettingActicity extends AppCompatActivity {
     private EditText birthday;
+    private CheckBox checkBoxMan,checkBoxWomen;
     private Calendar calendar;
     private int year;
     private int month;
@@ -47,8 +51,28 @@ public class UserSettingActicity extends AppCompatActivity {
                 dpd.show();//显示DatePickerDialog组件
             }
         });
-
-
+        checkBoxMan = (CheckBox)findViewById(R.id.checkboxMan);
+        checkBoxWomen=(CheckBox)findViewById(R.id.checkboxWomen);
+        checkBoxMan.setOncheckListener(new CheckBox.OnCheckListener() {
+            @Override
+            public void onCheck(CheckBox checkBox, boolean b) {
+                if(b){
+                    checkBoxWomen.setChecked(false);
+                }else{
+                    checkBoxWomen.setChecked(true);
+                }
+            }
+        });
+        checkBoxWomen.setOncheckListener(new CheckBox.OnCheckListener() {
+            @Override
+            public void onCheck(CheckBox checkBox, boolean b) {
+                if(b){
+                    checkBoxMan.setChecked(false);
+                }else{
+                    checkBoxMan.setChecked(true);
+                }
+            }
+        });
     }
     private DatePickerDialog.OnDateSetListener Datelistener=new DatePickerDialog.OnDateSetListener()
     {
