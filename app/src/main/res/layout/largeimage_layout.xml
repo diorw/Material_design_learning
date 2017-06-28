@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:transitionName="turn_large1"
+        android:id="@+id/large_image_item1"
+        android:layout_gravity="center"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:transitionName="turn_large2"
+        android:id="@+id/large_image_item2"
+        android:layout_gravity="center"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:transitionName="turn_large3"
+        android:id="@+id/large_image_item3"
+        android:layout_gravity="center"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:transitionName="turn_large4"
+        android:id="@+id/large_image_item4"
+        android:layout_gravity="center"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:transitionName="turn_large5"
+        android:id="@+id/large_image_item5"
+        android:layout_gravity="center"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:transitionName="turn_large6"
+        android:id="@+id/large_image_item6"
+        android:layout_gravity="center"
+        />
+</RelativeLayout>

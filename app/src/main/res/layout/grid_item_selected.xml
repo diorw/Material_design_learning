@@ -4,7 +4,7 @@
     android:layout_height="fill_parent" >
 
 
-    <com.example.corodinatelayout.CardFrameLayout
+    <com.example.corodinatelayout.CardFrameLayout2
         style="@style/Select_Card">
 
         <ImageView
@@ -30,7 +30,7 @@
 
 
 
-    </com.example.corodinatelayout.CardFrameLayout>
+    </com.example.corodinatelayout.CardFrameLayout2>
 
 
     <!--<ImageView-->

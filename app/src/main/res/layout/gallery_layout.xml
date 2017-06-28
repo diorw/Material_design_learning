@@ -18,7 +18,7 @@
             android:layout_gravity="center"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            android:src="@drawable/meishi1" />
+            android:src="@drawable/ai" />
 
         <TextView
             android:id="@+id/title1"
@@ -27,7 +27,7 @@
             android:layout_alignStart="@+id/meishi1"
             android:layout_below="@+id/meishi1"
             android:layout_marginTop="16dp"
-            android:text="拉面"
+            android:text="设计"
             android:textColor="#de000000"
             android:textSize="16sp" />
 
@@ -38,7 +38,7 @@
             android:layout_alignStart="@+id/meishi1"
             android:layout_below="@+id/title1"
             android:layout_marginTop="2dp"
-            android:text="美食"
+            android:text="母亲节专属字体"
             android:textColor="#8a000000"
             android:textSize="16sp" />
 
@@ -50,7 +50,7 @@
             android:layout_alignTop="@+id/meishi1"
             android:layout_gravity="center"
             android:layout_marginEnd="16dp"
-            android:src="@drawable/meishi2" />
+            android:src="@drawable/fanchuan" />
 
         <TextView
             android:id="@+id/title2"
@@ -59,7 +59,7 @@
             android:layout_alignStart="@+id/meishi2"
             android:layout_below="@+id/meishi2"
             android:layout_marginTop="16dp"
-            android:text="寿司"
+            android:text="画板"
             android:textColor="#de000000"
             android:textSize="16sp" />
 
@@ -70,7 +70,7 @@
             android:layout_alignStart="@+id/meishi2"
             android:layout_below="@+id/title2"
             android:layout_marginTop="2dp"
-            android:text="美食"
+            android:text="卢浮宫典藏油画"
             android:textColor="#8a000000"
             android:textSize="16sp" />
 
@@ -82,7 +82,7 @@
             android:layout_below="@+id/class1"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
-            android:src="@drawable/tiyu1" />
+            android:src="@drawable/logo" />
 
         <TextView
             android:id="@+id/title3"
@@ -91,7 +91,7 @@
             android:layout_alignStart="@+id/tiyu1"
             android:layout_below="@+id/tiyu1"
             android:layout_marginTop="16dp"
-            android:text="滑冰"
+            android:text="画板"
             android:textColor="#de000000"
             android:textSize="16sp" />
 
@@ -102,7 +102,7 @@
             android:layout_alignStart="@+id/tiyu1"
             android:layout_below="@+id/title3"
             android:layout_marginTop="2dp"
-            android:text="体育"
+            android:text="就是爱LOGO"
             android:textColor="#8a000000"
             android:textSize="16sp" />
 
@@ -114,7 +114,7 @@
             android:layout_below="@+id/class2"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
-            android:src="@drawable/tiyu2" />
+            android:src="@drawable/gou" />
 
         <TextView
             android:id="@+id/title4"
@@ -123,7 +123,7 @@
             android:layout_alignStart="@+id/tiyu2"
             android:layout_below="@+id/tiyu2"
             android:layout_marginTop="16dp"
-            android:text="足球"
+            android:text="画板"
             android:textColor="#de000000"
             android:textSize="16sp" />
 
@@ -134,7 +134,7 @@
             android:layout_alignStart="@+id/tiyu2"
             android:layout_below="@+id/title3"
             android:layout_marginTop="2dp"
-            android:text="体育"
+            android:text="我的120块"
             android:textColor="#8a000000"
             android:textSize="16sp" />
 
@@ -146,7 +146,7 @@
             android:layout_below="@+id/class3"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
-            android:src="@drawable/fengjing1" />
+            android:src="@drawable/chahua" />
 
         <TextView
             android:id="@+id/title5"
@@ -155,7 +155,7 @@
             android:layout_alignStart="@+id/fengjing1"
             android:layout_below="@+id/fengjing1"
             android:layout_marginTop="16dp"
-            android:text="山"
+            android:text="插画"
             android:textColor="#de000000"
             android:textSize="16sp" />
 
@@ -166,7 +166,7 @@
             android:layout_alignStart="@+id/title5"
             android:layout_below="@+id/title5"
             android:layout_marginTop="2dp"
-            android:text="风景"
+            android:text="猴哥MS原创"
             android:textColor="#8a000000"
             android:textSize="16sp" />
 
@@ -178,7 +178,7 @@
             android:layout_below="@+id/class4"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
-            android:src="@drawable/fengjing2" />
+            android:src="@drawable/naicha" />
 
         <TextView
             android:id="@+id/title6"
@@ -187,7 +187,7 @@
             android:layout_alignStart="@+id/tiyu2"
             android:layout_below="@+id/fengjing2"
             android:layout_marginTop="16dp"
-            android:text="草原"
+            android:text="视觉"
             android:textColor="#de000000"
             android:textSize="16sp" />
 
@@ -198,7 +198,7 @@
             android:layout_alignStart="@+id/title6"
             android:layout_below="@+id/title6"
             android:layout_marginTop="2dp"
-            android:text="风景"
+            android:text="饮品摄影"
             android:textColor="#8a000000"
             android:textSize="16sp" />
 

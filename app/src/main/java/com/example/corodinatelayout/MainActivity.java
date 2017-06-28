@@ -3,9 +3,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.PagerAdapter;
@@ -55,7 +53,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -67,19 +65,19 @@ public class MainActivity extends AppCompatActivity
         mTabLayout = (TabLayout) findViewById(R.id.tabs);
         mInflater = LayoutInflater.from(this);
         setupViewPager();
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("UNDO", new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-
-                            }
-                        }).show();
-            }
-        });
+     //   FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("UNDO", new View.OnClickListener() {
+//                            @Override
+//                            public void onClick(View v) {
+//
+//                            }
+//                        }).show();
+//            }
+//        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -154,10 +152,15 @@ public class MainActivity extends AppCompatActivity
             intent.setClass(MainActivity.this,FoldMainActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_classification) {
-           // Intent intent = new Intent();
-          //  intent.setClass(MainActivity.this,ViewpageActivity.class);
-          //  startActivity(intent);
+            Intent intent = new Intent();
+            intent.setClass(MainActivity.this,GridLayout_Selected.class);
+            startActivity(intent);
+
         } else if (id == R.id.nav_dress) {
+
+            Intent intent = new Intent();
+            intent.setClass(MainActivity.this,ProfileActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_share) {
 
@@ -165,7 +168,7 @@ public class MainActivity extends AppCompatActivity
 
         }else if (id == R.id.nav_setup) {
             Intent intent = new Intent();
-            intent.setClass(MainActivity.this,UserSettingActicity.class);
+            intent.setClass(MainActivity.this,SettingActivity.class);
             startActivity(intent);
         }else if (id == R.id.nav_about) {
 
@@ -178,7 +181,7 @@ public class MainActivity extends AppCompatActivity
     private void setupViewPager(){
         //加载各个页面
         TabLayout tab=(TabLayout)findViewById(R.id.tabs);
-        view1 = mInflater.inflate(R.layout.gallery_layout,null);
+        view1 = mInflater.inflate(R.layout.content_main,null);
         view2 = mInflater.inflate(R.layout.gallery_layout,null);
         view3 = mInflater.inflate(R.layout.content_main,null);
         //把页面统一放入一个list中,后统一设置
@@ -186,9 +189,9 @@ public class MainActivity extends AppCompatActivity
         mViewList.add(view2);
         mViewList.add(view3);
         //设置每个tab标题
-        mTitleList.add("postCast");
-        mTitleList.add("video");
-        mTitleList.add("network");
+        mTitleList.add("我的关注");
+        mTitleList.add("为您推荐");
+        mTitleList.add("优质画板");
 
         mTabLayout.setTabMode(TabLayout.MODE_FIXED);//设置tab模式，当前为系统默认模式
         mTabLayout.addTab(mTabLayout.newTab().setText(mTitleList.get(0)));//添加tab选项卡

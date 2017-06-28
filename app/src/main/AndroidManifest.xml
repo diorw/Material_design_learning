@@ -33,14 +33,52 @@
 
         </activity>
         <activity android:name="com.example.corodinatelayout.FoldMainActivity"
-        android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar">
 
-    </activity>
-        <activity android:name="com.example.corodinatelayout.ViewpageActivity"
+        </activity>
+        <activity android:name=".SelectPictureShowActivity"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
 
+        <activity android:name="com.example.corodinatelayout.GridLayout_Selected"
+            android:theme="@style/DiyTheme">
+
+        </activity>
+        <activity android:name=".SelecthotoDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+
+
+        <activity android:name="com.example.corodinatelayout.ViewpageActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity android:name="com.example.corodinatelayout.searchviewactivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name="com.example.corodinatelayout.DiscoverActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+
+        <activity android:name=".ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+        <activity android:name=".ListActivity">
+
+        </activity>
+        <activity android:name=".GalleryActivity">
+
+        </activity>
+        <activity android:name=".ImageLargeActivity2" android:theme="@style/AppTheme.NoActionBar">
+            </activity>
+        <activity android:name=".SettingActivity"></activity>
         <provider
             android:name="com.example.corodinatelayout.AssetProvider"
             android:authorities="com.example.corodinatelayout"

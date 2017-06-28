@@ -1,6 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
+
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -16,5 +17,161 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="DiyTheme" parent="@android:style/Theme.Holo">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:actionModeBackground">@drawable/pg_tittle</item>
+        <item name="android:actionModeCloseDrawable">@drawable/back_selected</item>
+        <item name="android:actionBarStyle">@style/DiyActionBarStyle</item>
+    </style>
+
+    <style name="DiyActionBarStyle" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@drawable/pg_tittle</item>
+    </style>
+
+    <style name="Card">
+
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+
+        <item name="android:elevation">@dimen/card_elevation</item>
+        <item name="android:background">@drawable/card_background</item>
+    </style>
+
+    <style name="Select_Card">
+
+        <item name="android:layout_width">170dp</item>
+        <item name="android:layout_height">170dp</item>
+
+
+        <item name="android:background">@drawable/card_background</item>
+    </style>
+
+    <style name="CardPhoto">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+
+        <!--<item name="android:tint">@color/photo_tint</item>-->
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="CardTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+
+        <item name="android:gravity">bottom|left</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingBottom">8dp</item>
+
+        <!--&lt;!&ndash;<item name="android:onClick">onItemClick</item>&ndash;&gt;-->
+        <!--<item name="android:clickable">true</item>-->
+
+        <!--<item name="android:focusable">true</item>-->
+        <item name="android:background">?android:selectableItemBackground</item>
+    </style>
+    <style name="Select_CardTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+
+        <item name="android:gravity">bottom|left</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingBottom">8dp</item>
+
+    </style>
+    <style name="wrap_layout">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:padding">1px</item>
+        <item name="android:background">@drawable/bg_layout_shape</item>
+
+    </style>
+
+    <!-- 鍏辩敤灞傛牱寮?-->
+    <style name="base_layout">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">false</item>
+    </style>
+
+    <style name="based_layout">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+
+    <!-- 涓婂渾瑙掓牱寮?-->
+    <style name="top_layout" parent="based_layout">
+        <item name="android:background">@drawable/top_layout_selector</item>
+    </style>
+
+
+    <!--鏃犲渾瑙掓牱寮? -->
+    <style name="mid_layout" parent="base_layout">
+        <item name="android:background">@drawable/mid_layout_selector</item>
+    </style>
+
+    <style name="mid2_layout" parent="based_layout">
+        <item name="android:background">@drawable/mid_layout_selector</item>
+    </style>
+
+    <!-- 涓嬪渾瑙掓牱寮?-->
+    <style name="bottom_layout"  parent="based_layout">
+        <item name="android:background">@drawable/bottom_layout_selector</item>
+    </style>
+
+
+
+
+    <!-- textview鏍峰紡 -->
+    <style name="usertext">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/text_clo</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+
+    <!-- 鏂囨湰鍙宠竟绠ご鏍峰紡 -->
+
+
+
+    <!-- view鍒嗗壊绾挎牱寮?-->
+    <style name="bg_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/border_clo</item>
+    </style>
+
 
 </resources>

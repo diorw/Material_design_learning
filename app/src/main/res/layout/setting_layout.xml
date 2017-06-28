@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F3F6"
+    >
+
+
+    <LinearLayout style="@style/wrap_layout" >
+        <!-- 上圆角-->
+        <LinearLayout style="@style/top_layout" android:id="@+id/gerenziliao">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/account"
+                android:alpha="0.54"/>
+            <TextView style="@style/usertext" android:text="个人资料设定"
+                android:layout_marginLeft="12dp"/>
+        </LinearLayout>
+        <View style="@style/bg_line"/>
+        <LinearLayout style="@style/top_layout">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/wifi"
+                android:alpha="0.54"/>
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_marginLeft="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="仅WIFI加载图片"
+                android:textSize="16dp"
+                android:textColor="#de000000"/>
+        </LinearLayout>
+        <!-- 分割线 -->
+        <View style="@style/bg_line"/>
+        <!-- 无圆角-->
+        <LinearLayout style="@style/mid_layout">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/brightness"
+                android:alpha="0.54"/>
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_marginLeft="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="自动调节亮度"
+                android:textSize="16dp"
+                android:textColor="#de000000"/>
+        </LinearLayout>
+        <View style="@style/bg_line"/>
+        <LinearLayout style="@style/mid_layout">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/volume"
+                android:alpha="0.54"/>
+            <Switch
+                android:id="@+id/switch3"
+                android:layout_marginLeft="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="声音"
+                android:textSize="16dp"
+                android:textColor="#de000000"/>
+        </LinearLayout>
+        <View style="@style/bg_line"/>
+        <LinearLayout style="@style/mid_layout">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/comment"
+                android:alpha="0.54"/>
+            <Switch
+                android:id="@+id/switch4"
+                android:layout_marginLeft="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="开启消息提醒"
+                android:textSize="16dp"
+                android:textColor="#de000000"/>
+        </LinearLayout>
+        <View style="@style/bg_line"/>
+        <LinearLayout style="@style/bottom_layout" android:id="@+id/huancun">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/delete1"
+                android:alpha="0.54"/>
+            <TextView style="@style/usertext" android:text="清除缓存"
+                android:layout_marginLeft="12dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.6M"
+                android:textColor="#8a000000"
+                android:layout_marginRight="8dp"
+                android:textSize="16dp"/>
+        </LinearLayout>
+
+        <!-- 下圆角-->
+
+
+    </LinearLayout>
+
+
+    <!-- 全圆角-->
+
+</LinearLayout>

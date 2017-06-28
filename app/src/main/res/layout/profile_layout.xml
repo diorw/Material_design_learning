@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout android:id="@+id/id_swipe_ly"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollview1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical"
+    android:layout_marginTop="0dp">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/profileback"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/touxiang" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:alpha="0.87"
+            android:text="许老师"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:textColor="#FFFFFF"
+            android:text="注册时间:3年2个月"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/guanzhu"
+                android:layout_width="1dip"
+                android:layout_height="wrap_content"
+                android:text="关注"
+                android:background="#FFFFFF" />
+
+            <Button
+                android:id="@+id/fensi"
+                android:layout_width="1dip"
+                android:layout_height="wrap_content"
+                android:text="粉丝"
+                android:background="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/shoucang"
+                android:layout_width="1dip"
+                android:layout_height="wrap_content"
+                android:text="收藏"
+                android:background="#FFFFFF"/>
+
+        </TableRow>
+    </TableLayout>
+    <View style="@style/bg_line"
+        android:layout_marginTop="1dp"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="23"
+            android:textColor="#000000"
+            android:alpha="0.87"
+            android:textSize="24sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:id="@+id/date1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="五月"
+            android:layout_alignLeft="@+id/date1"
+            android:textSize="14sp"
+            android:layout_below="@+id/date1"
+            android:textColor="#000000"
+            android:alpha="0.54"
+            android:layout_marginTop="4dp"/>
+        <TextView
+            android:id="@+id/guanzhu1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我  关注了风景板块"
+            android:layout_alignTop="@+id/date1"
+            android:textSize="14sp"
+            android:layout_toRightOf="@+id/date1"
+            android:layout_marginLeft="16dp"
+            android:textColor="#000000"
+            android:alpha="0.54"
+            />
+        <ImageView
+            android:id="@+id/bankuai1"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/fengjing"
+            android:layout_alignLeft="@+id/guanzhu1"
+            android:layout_below="@+id/guanzhu1"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:id="@+id/bankuai2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="风景"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:alpha="0.87"
+            android:layout_alignTop="@+id/bankuai1"
+            android:layout_toRightOf="@+id/bankuai1"
+            android:layout_marginLeft="8dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关注:1.2w"
+            android:textColor="#000000"
+            android:alpha="0.54"
+            android:layout_alignLeft="@+id/bankuai2"
+            android:layout_below="@+id/bankuai2"
+            android:layout_marginTop="2dp"
+
+            />
+    </RelativeLayout>
+    <View style="@style/bg_line"
+        android:layout_marginTop="16dp"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18"
+            android:textColor="#000000"
+            android:alpha="0.87"
+            android:textSize="24sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:id="@+id/date2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="三月"
+            android:layout_alignLeft="@+id/date2"
+            android:textSize="14sp"
+            android:layout_below="@+id/date2"
+            android:textColor="#000000"
+            android:alpha="0.54"
+            android:layout_marginTop="4dp"/>
+        <TextView
+            android:id="@+id/fabu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我  在风景板块发布了图片"
+            android:layout_alignTop="@+id/date2"
+            android:textSize="14sp"
+            android:layout_toRightOf="@+id/date2"
+            android:layout_marginLeft="16dp"
+            android:textColor="#000000"
+            android:alpha="0.54"
+            />
+        <ImageView
+            android:layout_width="250sp"
+            android:layout_height="250dp"
+            android:layout_alignLeft="@+id/fabu"
+            android:src="@drawable/movie"
+            android:layout_below="@+id/fabu"
+            android:layout_marginTop="8dp"/>
+    </RelativeLayout>
+    <View style="@style/bg_line"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>
+</ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

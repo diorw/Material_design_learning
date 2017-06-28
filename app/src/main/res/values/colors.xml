@@ -4,4 +4,12 @@
     <color name="colorPrimaryDark">#7ccf75</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorTitle">#ffffff</color>
+    <color name="photo_tint">#7f101010</color>
+    <color name="colorP">#506afa</color>
+    <color name="text_clo">#de000000</color>
+    <color name="white">#fff</color>
+    <color name="blue">#419DE4</color>
+    <color name="border_clo">#ccc</color>
+
+
 </resources>
