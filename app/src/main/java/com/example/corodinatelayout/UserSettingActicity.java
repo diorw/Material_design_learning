@@ -2,17 +2,28 @@ package com.example.corodinatelayout;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.view.menu.ActionMenuItem;
+import android.support.v7.view.menu.ActionMenuItemView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.gc.materialdesign.views.CheckBox;
+
+import net.steamcrafted.materialiconlib.MaterialDrawableBuilder;
+
+import org.w3c.dom.Text;
 
 import java.util.Calendar;
 
@@ -22,12 +33,21 @@ import java.util.Calendar;
  */
 public class UserSettingActicity extends AppCompatActivity {
     private EditText birthday;
+    private EditText name;
+    private EditText email;
+    private EditText introduce;
     private CheckBox checkBoxMan,checkBoxWomen;
     private Calendar calendar;
     private int year;
     private int month;
     private int day;
+    private ActionMenuItemView ok;
     private DatePicker datePicker;
+    private String Birthday;
+    private String Name;
+    private String Introduce;
+    private String Email;
+    private int gender;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +60,9 @@ public class UserSettingActicity extends AppCompatActivity {
         toolbar.setTitleTextColor(getResources().getColor(R.color.colorTitle));
         toolbar.inflateMenu(R.menu.user_menu);
         birthday = (EditText)findViewById(R.id.birthday);
+        name = (EditText)findViewById(R.id.user_name);
+        introduce = (EditText)findViewById(R.id.introduce);
+        email = (EditText)findViewById(R.id.email);
         calendar = Calendar.getInstance();
         year = calendar.get(Calendar.YEAR);
         month = calendar.get(Calendar.MONTH) + 1;
@@ -57,8 +80,10 @@ public class UserSettingActicity extends AppCompatActivity {
             @Override
             public void onCheck(CheckBox checkBox, boolean b) {
                 if(b){
+                    gender = 1;
                     checkBoxWomen.setChecked(false);
                 }else{
+                    gender = 0;
                     checkBoxWomen.setChecked(true);
                 }
             }
@@ -67,12 +92,45 @@ public class UserSettingActicity extends AppCompatActivity {
             @Override
             public void onCheck(CheckBox checkBox, boolean b) {
                 if(b){
+                    gender = 0;
                     checkBoxMan.setChecked(false);
                 }else{
+                    gender = 1;
                     checkBoxMan.setChecked(true);
                 }
             }
         });
+
+        DaoMaster.DevOpenHelper devopenhelper = new DaoMaster.DevOpenHelper(getApplicationContext(),"user-db",null);
+        DaoMaster daomaster = new DaoMaster(devopenhelper.getWritableDatabase());
+        DaoSession daosession = daomaster.newSession();
+        UserDao userDao = daosession.getUserDao();
+      /*  User userTemp = new User(1,"wda",null,null,null,1);
+        userDao.insert(userTemp);*/
+
+        User user = userDao.queryBuilder().where(UserDao.Properties.Id.eq(1)).build().unique();
+        name.setText(user.getUsername());
+        birthday.setText(user.getBirthday());
+        introduce.setText(user.getIntroduce());
+        if(user.getGender()==1){
+            checkBoxWomen.setChecked(true);
+            checkBoxMan.setChecked(false);
+        }else{
+            checkBoxMan.setChecked(false);
+            checkBoxWomen.setChecked(true);
+        }
+        email.setText(user.getEmail());
+
+
+        ok = (ActionMenuItemView)findViewById(R.id.ok);
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
+            }
+        });
+
+
     }
     private DatePickerDialog.OnDateSetListener Datelistener=new DatePickerDialog.OnDateSetListener()
     {
@@ -98,6 +156,7 @@ public class UserSettingActicity extends AppCompatActivity {
         {
             //在TextView上显示日期
             birthday.setText(year+"-"+(month+1)+"-"+day);
+            Birthday = birthday.getText().toString();
         }
     };
 }
