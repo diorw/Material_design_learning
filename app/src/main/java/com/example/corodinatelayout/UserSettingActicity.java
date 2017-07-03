@@ -1,5 +1,4 @@
 package com.example.corodinatelayout;
-
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -26,8 +25,6 @@ import net.steamcrafted.materialiconlib.MaterialDrawableBuilder;
 import org.w3c.dom.Text;
 
 import java.util.Calendar;
-
-
 /**
  * Created by wda on 2017/5/24.
  */
@@ -48,6 +45,7 @@ public class UserSettingActicity extends AppCompatActivity {
     private String Introduce;
     private String Email;
     private int gender;
+    private UserDao userDao;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -104,7 +102,8 @@ public class UserSettingActicity extends AppCompatActivity {
         DaoMaster.DevOpenHelper devopenhelper = new DaoMaster.DevOpenHelper(getApplicationContext(),"user-db",null);
         DaoMaster daomaster = new DaoMaster(devopenhelper.getWritableDatabase());
         DaoSession daosession = daomaster.newSession();
-        UserDao userDao = daosession.getUserDao();
+        userDao = daosession.getUserDao();
+        //暂时添加的用户 id为1，测试用
       /*  User userTemp = new User(1,"wda",null,null,null,1);
         userDao.insert(userTemp);*/
 
@@ -126,7 +125,16 @@ public class UserSettingActicity extends AppCompatActivity {
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                User findUser = userDao.queryBuilder().where(UserDao.Properties.Id.eq(1)).build().unique();
+                if(findUser!=null) {
+                    findUser.setBirthday(birthday.getText().toString());
+                    findUser.setEmail(email.getText().toString());
+                    findUser.setGender(gender);
+                    findUser.setIntroduce(introduce.getText().toString());
+                    findUser.setUsername(name.getText().toString());
+                    userDao.update(findUser);
+                }
+
             }
         });
 
